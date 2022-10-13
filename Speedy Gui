@@ -1,0 +1,173 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextSpeed = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local Speed = Instance.new("TextButton")
+local Speeddown = Instance.new("TextButton")
+local Speedup = Instance.new("TextButton")
+local Info = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Frame.Position = UDim2.new(0.0356060602, 0, 0.604938269, 0)
+Frame.Size = UDim2.new(0, 635, 0, 252)
+Frame.Active = true
+Frame.Draggable = true
+
+TextSpeed.Name = "TextSpeed"
+TextSpeed.Parent = Frame
+TextSpeed.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+TextSpeed.Position = UDim2.new(3.2956347e-08, 0, 0.300448418, 0)
+TextSpeed.Size = UDim2.new(0, 463, 0, 82)
+TextSpeed.Font = Enum.Font.SourceSans
+TextSpeed.Text = "Type Walkspeed Here.."
+TextSpeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextSpeed.TextSize = 38.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.Size = UDim2.new(0, 632, 0, 60)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Most Popular Game Patch This"
+TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.TextSize = 58.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextButton.Position = UDim2.new(0.0280777812, 0, 0.717488825, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Enter"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 45.000
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(99, 95, 98)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Position = UDim2.new(0, 1216, 1, -250)
+
+Speed.Name = "Speed"
+Speed.Parent = Frame_2
+Speed.Position = UDim2.new(0, -682, 0, 110)
+Speed.Size = UDim2.new(0, 50, 0, 45)
+Speed.AutoButtonColor = false
+Speed.Style = Enum.ButtonStyle.RobloxButton
+Speed.Font = Enum.Font.SciFi
+Speed.Text = "50"
+Speed.TextColor3 = Color3.fromRGB(0, 85, 255)
+Speed.TextSize = 25.000
+Speed.TextWrapped = true
+
+Speeddown.Name = "Speeddown"
+Speeddown.Parent = Frame_2
+Speeddown.BorderColor3 = Color3.fromRGB(89, 139, 175)
+Speeddown.Position = UDim2.new(0, -729, 0, 120)
+Speeddown.Size = UDim2.new(0, 50, 0, 25)
+Speeddown.Style = Enum.ButtonStyle.RobloxButton
+Speeddown.Text = "<"
+Speeddown.TextColor3 = Color3.fromRGB(85, 170, 255)
+Speeddown.TextSize = 14.000
+Speeddown.TextStrokeColor3 = Color3.fromRGB(232, 232, 232)
+
+Speedup.Name = "Speedup"
+Speedup.Parent = Frame_2
+Speedup.Position = UDim2.new(0, -634, 0, 120)
+Speedup.Size = UDim2.new(0, 50, 0, 25)
+Speedup.Style = Enum.ButtonStyle.RobloxButton
+Speedup.Text = ">"
+Speedup.TextColor3 = Color3.fromRGB(85, 170, 255)
+Speedup.TextSize = 14.000
+
+Info.Name = "Info"
+Info.Parent = Frame_2
+Info.BackgroundColor3 = Color3.fromRGB(140, 35, 35)
+Info.BorderColor3 = Color3.fromRGB(108, 31, 20)
+Info.Position = UDim2.new(0, -734, 0, 70)
+Info.Size = UDim2.new(0, 150, 0, 45)
+Info.AutoButtonColor = false
+Info.Style = Enum.ButtonStyle.RobloxButton
+Info.Font = Enum.Font.SciFi
+Info.Text = "Jump-Power"
+Info.TextColor3 = Color3.fromRGB(0, 85, 255)
+Info.TextScaled = true
+Info.TextSize = 14.000
+Info.TextStrokeColor3 = Color3.fromRGB(130, 22, 22)
+Info.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+TextLabel_2.Position = UDim2.new(0.76692915, 0, 0.623015881, 0)
+TextLabel_2.Size = UDim2.new(0, 145, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Patched:("
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+-- Scripts:
+
+local function KIOCSC_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local plr = game.Players.LocalPlayer -- Going inTo Players Section Looking For You're Local Character
+		local char = plr.Character --You're Character Variable to--
+		char.Humanoid.WalkSpeed = (script.parent.parent.TextSpeed.Text) --Input of The WalkSpeed Button Kinda Like The Number--
+	end)
+end
+coroutine.wrap(KIOCSC_fake_script)()
+local function XETTK_fake_script() -- Speeddown.Script 
+	local script = Instance.new('Script', Speeddown)
+
+	
+end
+coroutine.wrap(XETTK_fake_script)()
+local function PRBPY_fake_script() -- Speeddown.Script 
+	local script = Instance.new('LocalScript', Speeddown)
+
+	speed = script.Parent.Parent.Parent.Speed
+	val = script.Parent.Parent.Speed
+	
+	function changed()
+		if speed.Value > 50 then
+		speed.Value = speed.Value - 25
+		val.Text = speed.Value
+		end
+	end
+	
+	script.Parent.MouseButton1Down:connect(changed)
+	
+end
+coroutine.wrap(PRBPY_fake_script)()
+local function JJFZNWA_fake_script() -- Speedup.Script 
+	local script = Instance.new('Script', Speedup)
+
+	
+end
+coroutine.wrap(JJFZNWA_fake_script)()
+local function WMLVZX_fake_script() -- Speedup.LocalScript 
+	local script = Instance.new('LocalScript', Speedup)
+
+	speed = script.Parent.Parent.Parent.Speed
+	val = script.Parent.Parent.Speed
+	
+	function changed()
+		if speed.Value < 766 then
+		speed.Value = speed.Value + 25
+		val.Text = speed.Value
+		end
+	end
+	
+	script.Parent.MouseButton1Down:connect(changed)
+	
+end
+coroutine.wrap(WMLVZX_fake_script)()
